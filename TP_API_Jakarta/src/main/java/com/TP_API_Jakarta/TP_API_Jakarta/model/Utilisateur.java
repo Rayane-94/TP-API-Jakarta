@@ -21,19 +21,19 @@ public class Utilisateur {
 		this.prenom = prenom;
 	}
 
-	public String getnom() {
+	public String getNom() {
 		return nom;
 	}
 
-	public void setnom(String nom) {
+	public void setNom(String nom) {
 		this.nom = nom;
 	}
 
-	public String getprenom() {
+	public String getPrenom() {
 		return prenom;
 	}
 
-	public void setprenom(String prenom) {
+	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
 
