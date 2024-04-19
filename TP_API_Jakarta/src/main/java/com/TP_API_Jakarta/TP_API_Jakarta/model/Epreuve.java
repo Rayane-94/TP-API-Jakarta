@@ -3,16 +3,22 @@ package com.TP_API_Jakarta.TP_API_Jakarta.model;
 public class Epreuve {
 
     private String nom_epreuve;
-    private Date date;
-    private String adresse ;
+    private String date;
+    private String adresse;
 
-    public CreateEpreuve(String nom_epreuve, Date date) {
+    public void CreateEpreuve (String nom_epreuve, String date, String adresse) {
+
 		this.nom_epreuve = nom_epreuve;
-		this.Date = date;
+		this.date = date;
+        this.adresse = adresse;
 	}
 
     public String getEpreuve() {
 		return nom_epreuve;
+	}
+
+    public String getDate() {
+		return date;
 	}
 
 }
