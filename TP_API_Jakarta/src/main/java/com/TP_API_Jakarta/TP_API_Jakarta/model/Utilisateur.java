@@ -1,9 +1,11 @@
 package com.TP_API_Jakarta.TP_API_Jakarta.model;
 
+import java.lang.String;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.time.LocalDateTime;
 
 @Entity
 public class Utilisateur {
@@ -15,10 +17,18 @@ public class Utilisateur {
 
 	private String prenom;
 
+	private String email;
+
+	private String mdp;
+
+	private LocalDateTime deletedAt = null;
+
 	public Utilisateur() {}
-	public Utilisateur(String nom, String prenom) {
+	public Utilisateur(String nom, String prenom, String email, String mdp) {
 		this.nom = nom;
 		this.prenom = prenom;
+		this.email = email;
+		this.mdp = mdp;
 	}
 
 	public String getNom() {
@@ -41,4 +51,27 @@ public class Utilisateur {
 		return uuid;
 	} 
 
+	public LocalDateTime getDeletedAt() {
+		return deletedAt;
+	}
+
+	public void setDeletedAt(LocalDateTime deletedAt) {
+		this.deletedAt = deletedAt;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getMdp() {
+		return mdp;
+	}
+
+	public void setMdp(String mdp) {
+		this.mdp = mdp;
+	}
 }

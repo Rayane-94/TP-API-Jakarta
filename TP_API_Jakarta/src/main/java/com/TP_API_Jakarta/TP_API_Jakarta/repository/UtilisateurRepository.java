@@ -11,6 +11,8 @@ import java.util.Optional;
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, String> {
     List<Utilisateur> findAll();
 
+	List<Utilisateur> findAllByDeletedAtNull();
+
 	// SELECT * FROM Utilisateur where uuid = ?
 	Optional<Utilisateur> findOneByUuid(String uuid);
 }
