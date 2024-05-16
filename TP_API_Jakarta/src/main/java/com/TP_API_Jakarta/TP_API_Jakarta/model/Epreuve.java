@@ -1,7 +1,11 @@
 package com.TP_API_Jakarta.TP_API_Jakarta.model;
 
-public class Epreuve {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+public class Epreuve {
+@Id
     private String nom_epreuve;
     private String date;
     private String adresse;
@@ -10,7 +14,7 @@ public class Epreuve {
 
 		this.nom_epreuve = nom_epreuve;
 		this.date = date;
-        this.adresse = adresse;
+    this.adresse = adresse;
 	}
 
     public String getEpreuve() {
@@ -19,6 +23,9 @@ public class Epreuve {
 
     public String getDate() {
 		return date;
+	}
+    public String getAdresse() {
+		return adresse;
 	}
 
 }
