@@ -1,4 +1,3 @@
-com\TP_API_Jakarta\TP_API_Jakarta\model\Billet.class
 com\TP_API_Jakarta\TP_API_Jakarta\service\UtilisateurService.class
 com\TP_API_Jakarta\TP_API_Jakarta\dto\UpdateUser.class
 com\TP_API_Jakarta\TP_API_Jakarta\dto\CreateUser.class

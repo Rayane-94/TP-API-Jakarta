@@ -1,12 +1,13 @@
 package com.TP_API_Jakarta.TP_API_Jakarta.service;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import jakarta.transaction.Transactional;
+
 import com.TP_API_Jakarta.TP_API_Jakarta.repository.UtilisateurRepository;
 import com.TP_API_Jakarta.TP_API_Jakarta.dto.CreateUser;
 import com.TP_API_Jakarta.TP_API_Jakarta.dto.UpdateUser;
 import com.TP_API_Jakarta.TP_API_Jakarta.model.Utilisateur;
-import jakarta.transaction.Transactional;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
