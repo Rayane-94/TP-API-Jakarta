@@ -29,6 +29,7 @@ public class UtilisateurController {
 	}
 
 	@GetMapping("/{uuid}")
+	//student a changer 
 	public ResponseEntity<Utilisateur> findOneById(@PathVariable String uuid) {
 		Utilisateur student = service.findUtilisateurById(uuid);
 		if(student != null) {
