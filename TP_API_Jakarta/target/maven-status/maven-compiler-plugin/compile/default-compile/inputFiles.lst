@@ -1,11 +1,16 @@
+C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\dto\CreateEpreuve.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\controller\BilletController.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\controller\UtilisateurController.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\model\Billet.java
+C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\service\EpreuveService.java
+C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\controller\EpreuveController.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\repository\UtilisateurRepository.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\model\Utilisateur.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\service\UtilisateurService.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\service\BilletService.java
+C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\repository\EpreuveRepository.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\repository\BilletRepository.java
+C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\dto\UpdateEpreuve.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\dto\CreateBillet.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\dto\UpdateUser.java
 C:\Users\rayan\Downloads\TP-API-Jakarta-main\TP-API-Jakarta\TP_API_Jakarta\src\main\java\com\TP_API_Jakarta\TP_API_Jakarta\dto\UpdateBillet.java
