@@ -4,8 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Epreuve {
@@ -17,6 +20,9 @@ public class Epreuve {
     private String adresse;
     private LocalDateTime deletedAt;  // Ajoutez cette ligne
 
+    @OneToMany(mappedBy = "epreuve")
+    private List<Billet> billets;
+    
     public Epreuve() {}
 
     public Epreuve(String nomEpreuve, LocalDate date, String adresse) {
