@@ -1,11 +1,16 @@
 package com.TP_API_Jakarta.TP_API_Jakarta.model;
 
 import java.lang.String;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Utilisateur {
@@ -22,6 +27,9 @@ public class Utilisateur {
 	private String mdp;
 
 	private LocalDateTime deletedAt = null;
+
+	@OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Billet> billets;
 
 	public Utilisateur() {}
 	public Utilisateur(String nom, String prenom, String email, String mdp) {

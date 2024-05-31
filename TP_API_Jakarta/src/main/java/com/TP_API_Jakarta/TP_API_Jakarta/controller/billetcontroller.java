@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.List;
 
 @RestController
@@ -39,12 +38,8 @@ public class BilletController {
 
 	@PostMapping
 	public ResponseEntity<Billet> save(@RequestBody CreateBillet billetDTO) {
-        try {
-            Billet createdBillet = service.createBillet(billetDTO);
-            return new ResponseEntity<>(createdBillet, HttpStatus.CREATED);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+		Billet createdBillet = service.createBillet(billetDTO);
+		return new ResponseEntity<>(createdBillet, HttpStatus.CREATED);
     }
 
 	@DeleteMapping("/{uuid}")

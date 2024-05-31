@@ -18,6 +18,9 @@ public class CreateBillet {
     @NotNull
     private String epreuveUuid;
 
+    @NotNull
+    private String utilisateurUuid;
+
     public Float getPrix() {
         return prix;
     }
@@ -40,5 +43,13 @@ public class CreateBillet {
 
     public void setEpreuveUuid(String epreuveUuid) {
         this.epreuveUuid = epreuveUuid;
+    }
+
+    public String getUtilisateurUuid() {
+        return utilisateurUuid;
+    }
+
+    public void setUtilisateurUuid(String utilisateurUuid) {
+        this.utilisateurUuid = utilisateurUuid;
     }
 }

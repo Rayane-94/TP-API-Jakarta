@@ -1,12 +1,6 @@
 package com.TP_API_Jakarta.TP_API_Jakarta.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,6 +8,7 @@ public class Billet {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String uuid;
+
     private Float prix;
     private Integer nbBillet;
     private LocalDateTime deletedAt;
@@ -21,19 +16,27 @@ public class Billet {
     @ManyToOne
     @JoinColumn(name = "epreuve_uuid", nullable = false)
     private Epreuve epreuve;
-    
+
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_uuid", nullable = false)
+    private Utilisateur utilisateur;
+
     public Billet() {}
-    
+
     public Billet(Float prix, Integer nbBillet) {
         this.prix = prix;
         this.nbBillet = nbBillet;
     }
 
-    public float getPrix() {
+    public String getUuid() {
+        return uuid;
+    }
+
+    public Float getPrix() {
         return prix;
     }
 
-    public void setPrix(float prix) {
+    public void setPrix(Float prix) {
         this.prix = prix;
     }
 
@@ -60,5 +63,12 @@ public class Billet {
     public void setEpreuve(Epreuve epreuve) {
         this.epreuve = epreuve;
     }
+
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
+    }
+
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
+    }
 }
- 
