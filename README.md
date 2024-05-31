@@ -13,9 +13,9 @@
 
 ### ajouter un nouveau Billet (POST) = `http://localhost:8080/billets` 
 ### recuperer liste de tout les billets (GET) = `http://localhost:8080/billets`
-### recuperer un billets specifique (GET) = `http://localhost:8080/billets/{uuid}` Marche pas encore car pas d'id propre a chaque billet 
-### modifier un billets (PUT) = `http://localhost:8080/billets/{uuid}`    Marche pas encore car pas d'id propre a chaque billet
-### supprimer un billet specifique (DELETE) = `http://localhost:8080/billets/{uuid}`  Marche pas encore car pas d'id propre a chaque billet
+### recuperer un billets specifique (GET) = `http://localhost:8080/billets/{uuid}`  
+### modifier un billets (PUT) = `http://localhost:8080/billets/{uuid}`    
+### supprimer un billet specifique (DELETE) = `http://localhost:8080/billets/{uuid}`  
 
 ## Epreuve
 
