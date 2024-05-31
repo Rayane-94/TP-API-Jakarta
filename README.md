@@ -1,4 +1,4 @@
-## Rayane Besrour Adam El Ounissi
+## Rayane Besrour et Adam El Ounissi
 ## Requete CRUD:
 
 ## Utilisateur
