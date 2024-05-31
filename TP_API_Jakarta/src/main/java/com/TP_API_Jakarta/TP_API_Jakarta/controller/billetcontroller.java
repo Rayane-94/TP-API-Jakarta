@@ -38,10 +38,14 @@ public class BilletController {
 	}
 
 	@PostMapping
-	public ResponseEntity<Billet> save(@RequestBody CreateBillet createBillet) { 
-    Billet createdBillet = service.create(createBillet); 
-    return new ResponseEntity<>(createdBillet, HttpStatus.CREATED);
-}
+	public ResponseEntity<Billet> save(@RequestBody CreateBillet billetDTO) {
+        try {
+            Billet createdBillet = service.createBillet(billetDTO);
+            return new ResponseEntity<>(createdBillet, HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
 	@DeleteMapping("/{uuid}")
 	public ResponseEntity<?> delete(@PathVariable String uuid) {

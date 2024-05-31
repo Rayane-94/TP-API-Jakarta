@@ -23,7 +23,7 @@ public class Billet {
     private Epreuve epreuve;
     
     public Billet() {}
-
+    
     public Billet(Float prix, Integer nbBillet) {
         this.prix = prix;
         this.nbBillet = nbBillet;
@@ -51,6 +51,14 @@ public class Billet {
 
     public void setDeletedAt(LocalDateTime deletedAt) {
         this.deletedAt = deletedAt;
+    }
+
+    public Epreuve getEpreuve() {
+        return epreuve;
+    }
+
+    public void setEpreuve(Epreuve epreuve) {
+        this.epreuve = epreuve;
     }
 }
  

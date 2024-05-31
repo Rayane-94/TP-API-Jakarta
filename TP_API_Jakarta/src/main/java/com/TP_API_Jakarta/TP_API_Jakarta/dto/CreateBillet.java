@@ -15,8 +15,14 @@ public class CreateBillet {
     @Positive
     private Float prix;
 
-    public CreateBillet(Integer nbBillet, Float prix) {
-        this.nbBillet = nbBillet;
+    @NotNull
+    private String epreuveUuid;
+
+    public Float getPrix() {
+        return prix;
+    }
+
+    public void setPrix(Float prix) {
         this.prix = prix;
     }
 
@@ -24,7 +30,15 @@ public class CreateBillet {
         return nbBillet;
     }
 
-    public Float getPrix() {
-        return prix;
+    public void setNbBillet(Integer nbBillet) {
+        this.nbBillet = nbBillet;
+    }
+
+    public String getEpreuveUuid() {
+        return epreuveUuid;
+    }
+
+    public void setEpreuveUuid(String epreuveUuid) {
+        this.epreuveUuid = epreuveUuid;
     }
 }

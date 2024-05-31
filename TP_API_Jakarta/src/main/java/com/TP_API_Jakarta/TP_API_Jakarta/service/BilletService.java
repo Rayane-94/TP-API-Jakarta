@@ -4,9 +4,11 @@ import org.springframework.stereotype.Service;
 import jakarta.transaction.Transactional;
 
 import com.TP_API_Jakarta.TP_API_Jakarta.repository.BilletRepository;
+import com.TP_API_Jakarta.TP_API_Jakarta.repository.EpreuveRepository;
 import com.TP_API_Jakarta.TP_API_Jakarta.dto.CreateBillet;
 import com.TP_API_Jakarta.TP_API_Jakarta.dto.UpdateBillet;
 import com.TP_API_Jakarta.TP_API_Jakarta.model.Billet;
+import com.TP_API_Jakarta.TP_API_Jakarta.model.Epreuve;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -21,6 +23,9 @@ public class BilletService {
 		this.repository = repository;
 	}
 
+	@Autowired
+    private EpreuveRepository epreuveRepository;
+
 	public List<Billet> findAllBillets() {
 		return repository.findAllByDeletedAtNull();
 	}
@@ -29,14 +34,18 @@ public class BilletService {
 		return repository.findOneByUuid(uuid).orElse(null);
 	}
 
-	public Billet create(CreateBillet Billet) {
-		Billet BilletACreer = new Billet(
-            Billet.getPrix(),
-            Billet.getNbBillet()
-            
-		);
-		return repository.save(BilletACreer);
-	}
+	public Billet createBillet(CreateBillet billetDto) {
+        
+        Epreuve epreuve = epreuveRepository.findById(billetDto.getEpreuveUuid())
+                .orElseThrow(() -> {
+                    return new RuntimeException("Epreuve not found");
+                });
+
+        Billet billet = new Billet(billetDto.getPrix(), billetDto.getNbBillet());
+        billet.setEpreuve(epreuve);
+
+        return repository.save(billet);
+    }
 
 	@Transactional
 	public boolean delete(String uuid) {
